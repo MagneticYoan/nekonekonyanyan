@@ -1,0 +1,683 @@
+/* FONT FACE */
+/* Appelle les polices de la page */
+
+@font-face {
+    font-family: "lemonmilk";
+    src: url("../fonts/lemon_milk/lemonmilk_light.otf");
+    font-weight: light;
+}
+
+@font-face {
+    font-family: "lemonmilk";
+    src: url("../fonts/lemon_milk/lemonmilk_bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "lemonmilk";
+    src: url("../fonts/lemon_milk/lemonmilk_regular.otf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "fascinate";
+    src: url("../fonts/Fascinate-Regular.ttf");
+    font-weight: normal;
+}
+
+/*GLOBAL */
+/* Balises et class appelés à plusieurs endroits dans la page */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	max-height: 80vh;
+	margin: 0;
+}
+
+/* HEADER */
+/* Ce qui concerne le header et la nav */
+
+header {
+	background-color: aquamarine;
+	text-align: center;
+	margin: 0;
+	padding: 1% 0 0 0;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+h2 {
+	font-family: "fascinate";
+	text-align: center;
+	text-shadow: 1px -1px 1px white;
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
+}
+
+header img {
+	width: 90%;
+	padding: 0;
+	margin: auto;
+}
+
+.subtitle {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+
+.inscriptionOk {
+	margin : 0;;
+	padding : 0;
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	background-color: white;
+	width: 100%;
+}
+
+nav {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+
+nav a {
+	color : black;
+	padding : 1em;
+	border-radius : 10px;
+	transition : 1s;
+}
+
+nav a:hover {
+	font-weight: bold;
+	background-color: rgba(255,255,255, 0.5);
+	transition : 1s;
+}
+
+/* MAIN */
+/* Ce qui concerne le corps du site */
+main {
+	width: 90%;
+	margin: 0 auto;
+    width: 100%;
+    grid-gap : 10px;
+    display: grid;
+    grid-template-rows : repeat(5, 1fr);
+    background-color: black;
+    padding: 10px;
+}
+
+h3 {
+	font-family: "lemonmilk";
+	text-align: center;
+	text-shadow: 1px -1px 1px white;
+	margin: 0 0 1% 0;
+	padding: 0;
+	font-size: 2em;
+    border-bottom: 2px solid black;
+    height: fit-content;
+    width: 100%;
+}
+
+#catnip {
+	background-color: rgb(228, 151, 79);
+	border-bottom : 5px solid rgb(209, 119, 29);
+	border-right : 5px solid rgb(209, 119, 29);
+	border-top : 5px solid rgb(254, 185, 126);
+	border-left : 5px solid rgb(254, 185, 126);
+	grid-row: 3;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+#shop {
+	background-color: rgb(204, 222, 67);
+	border-bottom : 5px solid rgb(145, 164, 0);
+	border-right : 5px solid rgb(145, 164, 0);
+	border-top : 5px solid rgb(231, 246, 117);
+	border-left : 5px solid rgb(231, 246, 117);
+	grid-row: 5;
+}
+
+#clicker {
+	background-color: #638ec5;
+	background-image: url('../img/bg_clicker.jpg');
+	background-position: center;
+	background-size: cover;
+	border-bottom : 5px solid rgba(76,104,144,0.5);
+	border-right : 5px solid rgba(76,104,144,0.5);
+	border-top : 5px solid rgba(126,160,234,0.5);
+	border-left : 5px solid rgba(156,189,243,0.5);
+	grid-row: 3 / 1;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+}
+
+
+
+#catHouse {
+	background-color: #983DA0;
+	border-bottom : 5px solid #6E1176;
+	border-right : 5px solid #6E1176;
+	border-top : 5px solid rgb(172, 92, 180);
+	border-left : 5px solid rgb(172, 92, 180);
+	display: block;
+}
+
+#allPossesedCatsAndAddOn {
+	display: flex;
+	height: 100%;
+    margin: 2%;
+}
+
+main > * {
+	padding: 5%;
+}
+	/* CLICKER */
+
+.nekoImg {
+	position: absolute;
+}
+
+#clicker p {
+	text-align: center;
+	color : rgb(255,255,255);
+	opacity : 0.5;
+	font-size : 3rem;
+	font-family: fascinate;
+}
+
+#catnipNumber {
+	font-family: lemonmilk;
+	text-shadow: 1px -1px 1px white;
+	text-align: center;
+	font-size: 3rem;
+	margin: 0;
+	padding: 0;
+	flex-grow: 1;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	
+}
+
+	/* FORM */
+
+form {
+	text-align: center;
+}
+
+fieldset {
+	background-color: white;
+}
+
+.inscriptionErrors {
+	text-align: center;
+	background-color: #e8807f;
+	border-bottom : 5px solid #a65f5d;
+	border-right : 5px solid #a65f5d;
+	border-top : 5px solid #fab5b0;
+	border-left : 5px solid #ff9b98;
+}
+
+	/* CLICKER */
+#availableCats, #catHouse {
+	padding: 1%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.gottenKitten {
+	height: 65px;
+	width: 65px;
+	background-image : url('../img/catbox.png');
+	background-position: left;
+	background-size: cover;
+}
+
+.gottenKitten img {
+	padding: 20px 5px;
+	width: 50px;
+}
+
+/* SHOP */
+/*Ce qui concerne le shop et le passage de level */
+
+.allNekoLevelToBuy {
+	display: flex;
+	text-align: center;
+}
+
+.catLevelIsLock {
+	width: 60%;
+	padding : 5% 1%;
+}
+
+.catLevelIsLock p {
+	font-size: 1.5rem;
+	margin: 0;
+	padding: 0;
+}
+
+.infoAboutCats {
+	background-color: beige;
+	border: 1px solid black;
+}
+
+.hiddenCats {
+	filter : grayscale(1);
+	opacity: 50%;
+}
+
+.ableToBuyCats {
+	filter : grayscale(0);
+	opacity: 100%;
+}
+
+/* HIGH SCORES */
+/* Ce qui concerne le tableau des scores */
+
+#highscores, #admin {
+	display: block;
+}
+
+#highscores h3, #user h3 {
+	color: aquamarine;
+}
+
+table {
+	border-spacing: 0;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+thead {
+	background-color: #e8807f;
+}
+
+tbody {
+	background-color: #eba833;
+}
+
+td {
+	padding: 1%;
+}
+
+#highscores p {
+	background-color: #638ec5 ;
+	padding: 1% 0;
+	width: 80%;
+	margin : 2% auto 0;
+	text-align: center;
+}
+
+thead td {
+	border-bottom : 5px solid #a65f5d;
+	border-top : 5px solid #fab5b0;
+}
+
+thead td:first-of-type {
+	border-left : 5px solid #ff9b98;
+}
+
+thead td:last-of-type {
+	border-right : 5px solid #a65f5d;
+}
+
+tbody td {
+	border-bottom: 5px solid #ab7930;
+	border-top: 5px solid #ffd370;
+}
+
+tbody td:first-of-type {
+	border-left: 5px solid #ffd370;
+}
+
+tbody td:last-of-type {
+	border-right : 5px solid #ffbf54;
+}
+
+/* USER PANEL */
+/* Ce qui concerne les users */
+
+#user {
+	display: block;
+}
+
+#user form:first-of-type {
+	background-color: white;
+    width: 90%;
+    margin: auto;
+}
+
+#user form:nth-of-type(2) {
+	display: flex;
+}
+
+#user form:nth-of-type(2) label {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+#user form:nth-of-type(2) label > * {
+	text-align: center;
+	width: 100%;
+}
+
+#user form:nth-of-type(2) fieldset {
+	margin: 0;
+	background-color: rgb(204,222,67);
+	border-top: 5px solid rgb(231,246,117);
+	border-left: 5px solid rgb(231,246,117);
+	border-bottom: 5px solid rgb(145,164,0);
+	border-right: 5px solid rgb(182,203,0);
+}
+
+#user form:nth-of-type(2) fieldset:hover {
+	margin: 0;
+	background-color: rgb(182,203,0);
+	border-top: 5px solid rgb(145,164,0);
+	border-left: 5px solid rgb(145,164,0);
+	border-bottom: 5px solid rgb(145,164,0);
+	border-right: 5px solid rgb(145,164,0);
+}
+
+
+/* ADMIN */
+/* Ce qui concerne le back office */
+
+#update_user {
+	display: block;
+}
+
+#update_user fieldset {
+	background-color: white;
+	display: flex;
+	flex-flow: column wrap;
+	padding: 2%;
+	margin: auto;
+	text-align: left;
+	background-color: #45cf34;
+	border-bottom : 5px solid #2a9d1a;
+	border-right : 5px solid #2a9d1a;
+	border-top : 5px solid #6df85d;
+	border-left : 5px solid #6df85d;
+}
+
+#update_user input {
+	width: 100%;
+	margin-bottom: 1%;
+}
+
+
+#update_user button {
+	margin: auto;
+	margin-top: 2%;
+}
+
+
+
+
+/* FOOTER */
+/* Ce qui concerne le footer */
+
+footer {
+	background-color: black;
+	color: white;
+	margin: 0;
+	padding: 1%;
+	text-align: center;
+}
+
+/* MEDIA QUERIES */
+/* tablette */
+
+@media (min-width: 480px) and (max-width: 1024px) {
+	
+	/* HEADER */
+	/* Ce qui concerne le header du site */
+	
+	h1  {
+		flex-flow: row wrap;
+	}
+	
+	h1 p {
+		width: max-content;
+	}
+	
+	/* MAIN */
+	/* Ce qui concerne le corps du site */
+	
+	main {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns : repeat(3, 1fr) ;
+	    grid-template-rows : repeat(7, max(150px));
+	    grid-gap : 10px;
+	    padding: 10px;
+	}
+	
+	#catnip {
+		grid-row: 3 / 1;
+		grid-column: 1;
+	}
+	
+	#shop {
+		grid-row: 6 / 3;
+		grid-column: 5 / 1;
+	}
+	
+	#clicker {
+		grid-column: 5 / 2;
+		grid-row: 3 / 1;
+		text-align: center;
+		position: relative;
+	}
+	
+	#availableCats {
+		grid-row: 3;
+		grid-column: 5 / 1;
+	}
+	
+	#catHouse {
+		grid-row: 8 / 6;
+		grid-column: 5 / 1;
+	}
+	
+	main > * {
+		padding: 5%;
+	}
+	
+	.catLevelIsLock {
+		margin: auto;
+		width: auto;
+	}
+	
+	table {
+		border-spacing: 0;
+		width: 80%;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+/* PC */
+
+@media (min-width: 1025px) {
+	
+	/* HEADER */
+	/* Ce qui concerne le header du site */
+	
+	h1  {
+		flex-flow: row wrap;
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	
+	h1 p {
+		width: max-content;
+	}
+	
+	
+	/* MAIN */
+	/* Ce qui concerne le corps du site */
+	
+	main {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns : repeat(4, 1fr) ;
+	    grid-template-rows : repeat(4, max(150px));
+	    width: 100%;
+	    grid-gap : 10px;
+	    padding: 10px;
+	}
+	
+	#catnip {
+		grid-column : 1;
+		grid-row: 1;
+		display: block;
+	}
+	
+	#shop {
+		grid-row: 5 / 1;
+		grid-column: 4;
+	}
+	
+	#clicker {
+		grid-column: 4 / 2;
+		grid-row: 5 / 1;
+		text-align: center;
+		position: relative;
+	}
+	
+	#availableCats {
+		grid-row: 4;
+		grid-column: 4 / 2;
+	}
+	
+	#catHouse {
+		grid-row: 5 / 2;
+	}
+	
+	.allNekoLevelToBuy {
+		flex-flow: column wrap;
+	}
+	
+	.catLevelIsLock {
+		margin: auto;
+		width: auto;
+	}
+	
+	main > * {
+		padding: 5%;
+	}
+	
+	.form {
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+	    width: 100%;
+	    padding: 10px;
+	    display: block;
+	}
+	
+	.form fieldset {
+		text-align: left;
+		background-color: #eba833;
+		border-bottom : 5px solid #ab7930;
+		border-right : 5px solid #ab7930;
+		border-top : 5px solid #ffd370;
+		border-left : 5px solid #ffbf54;
+		width: 80%;
+		margin: 0 auto;
+		grid-row: 5 / 1;
+		display: flex;
+		flex-flow: column wrap;
+		text-align: center;
+		
+	}
+	
+	.form .inscriptionErrors {
+		background-color: #e8807f;
+		border-bottom : 5px solid #a65f5d;
+		border-right : 5px solid #a65f5d;
+		border-top : 5px solid #fab5b0;
+		border-left : 5px solid #ff9b98;
+		text-align: center;
+	}
+	
+	.form fieldset div {
+		width: 100%;
+		display: flex;
+		text-align: center;
+	}
+	
+	.form fieldset div > * {
+		width : 50%;
+	}
+	
+	.form fieldset button {
+		width: 50%;
+		text-align: center;
+		margin : 0 25%;
+	}
+	
+	form fieldset label {
+		margin: 0 10%;
+		width: 45%;
+	}
+	
+	.form fieldset button {
+		width: max-content;
+		margin: auto;
+	}
+	
+	.form fieldset div label {
+		display: block;
+		width: 45px;
+	}
+	
+	table {
+		border-spacing: 0;
+		width: 80%;
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+	#update_user fieldset label {
+		margin: 0;
+	}
+	
+	#user form:first-of-type {
+		padding: 2%;
+		margin: 0;
+		width: max-content;
+	}	
+	
+	#user form:nth-of-type(2) img {
+		width: auto;
+	}	
+	
+	.userUpdateHimself {
+		width: max-content;
+		margin: 0 auto;
+		padding: 0;
+	}
+	
+	#highscores h3, #user h3 {
+		padding: 1% 0;
+	}
+	
+	#highscores table {
+		padding: 0;
+	}
+}
